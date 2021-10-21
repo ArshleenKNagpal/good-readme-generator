@@ -21,7 +21,7 @@ The following image shows the Good ReadMe Generator application's appearance and
 ![The screenshot includes an image of the Good ReadMe Generator.](./screenshot.png)
 
 
-You can view the walkthrough video at: <>
+You can view the walkthrough video at: <https://drive.google.com/file/d/13hAt4AlIbY4oPaa05g3cc0ntjxblyEB_/view?usp=sharing>
 
 The URL of the GitHub repository is: <https://github.com/ArshleenKNagpal/good-readme-generator>
 

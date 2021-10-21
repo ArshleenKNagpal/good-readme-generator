@@ -57,7 +57,7 @@ function generateMarkdown(data) {
   ## Contributors
   ${data.contributing}
 
-  ## Tests
+  ## Test
   To run tests, run the following command: 
 
   ${data.tests}
