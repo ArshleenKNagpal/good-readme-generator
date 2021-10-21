@@ -2,23 +2,31 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   return `
-  [GitHub License](https://img.shields.io/badge/license-${license}-blue.svg)
+  [![License](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license})
   `
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  return `
+  [License]((https://opensource.org/licenses/${license})
+  `
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  return `
+  `
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  console.log(data)
-  return `# ${data.title}
-  # ${data.Title}
+  console.log(data);
+
+  return `
+  # ${data.title}
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
@@ -27,23 +35,45 @@ function generateMarkdown(data) {
   * [Contributors](#contributors)
   * [Test](#test)
   * [Questions](#questions)
+  
   ## Description
-  ${data.Description}
+  ${data.description}
+
   ## Installation 
-  ${data.Installation}
+  To install necessary dependancies, run the following command:
+  
+  ${data.dependancies}
+
+
   ## Usage 
-  ${data.Usage}
+  ${data.info}
+
   ## License
+  This project is licensed under the ${data.license} license.
   ${renderLicenseBadge(data.license)}
+  ${renderLicenseLink(data.license)}
+  ${renderLicenseSection(data.license)}
+
   ## Contributors
-  ${data.Contributors}
-  ## Test
-  ${data.Test}
+  ${data.contributing}
+
+  ## Tests
+  To run tests, run the following command: 
+
+  ${data.tests}
+
   ## Questions
   Contact me:
-  Github:[${data.Username}]
-  Email:[${data.Email}]
-`;
+  \n  
+  If you have any questions about the repo, open an issue or contact me directly at:
+  Email: ${data.email}
+
+  You can find more of my work at:
+  Github: https://github.com/${data.username}
+
+`
+
+;
 }
 
 module.exports = generateMarkdown;
